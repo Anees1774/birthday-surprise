@@ -10,7 +10,6 @@ class BirthdaySurprise {
         this.bindEvents();
         this.showScreen('welcome');
     }
-
     bindEvents() {
         // Start button event
         const startBtn = document.getElementById('start-btn');
@@ -174,6 +173,7 @@ class BirthdaySurprise {
 
     setupVideo() {
         const video = document.getElementById('birthday-video');
+        if (!video || video.tagName !== 'VIDEO') return; 
         if (video) {
             video.preload = 'auto';
         }
@@ -338,15 +338,4 @@ document.addEventListener('click', (e) => {
     if (clickCount === 10) {
         console.log('🎊 You found the hidden easter egg! Your sibling really loves you! 🎊');
     }
-});
-
-// Prevent context menu on decorative elements to maintain the magic
-document.addEventListener('DOMContentLoaded', () => {
-    setTimeout(() => {
-        document.querySelectorAll('.balloon, .heart, .star').forEach(element => {
-            element.addEventListener('contextmenu', (e) => {
-                e.preventDefault();
-            });
-        });
-    }, 500);
 });
