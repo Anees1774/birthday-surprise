@@ -1,7 +1,7 @@
 // Birthday Surprise App JavaScript
 class BirthdaySurprise {
     constructor() {
-        this.correctAnswer = 'bestie';
+        this.correctAnswer = 'labbaru';
         this.currentScreen = 'welcome';
         this.init();
     }
