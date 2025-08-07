@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Sister! 🎉</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background decorations -->
+    <div class="decorations">
+        <div class="balloon balloon-1">🎈</div>
+        <div class="balloon balloon-2">🎈</div>
+        <div class="balloon balloon-3">🎈</div>
+        <div class="heart heart-1">💕</div>
+        <div class="heart heart-2">💖</div>
+        <div class="heart heart-3">💗</div>
+        <div class="star star-1">✨</div>
+        <div class="star star-2">⭐</div>
+        <div class="star star-3">🌟</div>
+    </div>
+
+    <!-- Welcome Screen -->
+    <div id="welcome-screen" class="screen active">
+        <div class="container">
+            <div class="welcome-content">
+                <h1 class="main-title">Happy Birthday, Sister! 🎉</h1>
+                <p class="subtitle">I have something very special prepared just for you...</p>
+                <div class="birthday-cake">🎂</div>
+                <button id="start-btn" class="btn btn--primary birthday-btn">
+                    Start Your Surprise ✨
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Question Screen -->
+    <div id="question-screen" class="screen">
+        <div class="container">
+            <div class="question-content">
+                <h2 class="question-title">One Quick Question... 💭</h2>
+                <p class="question-text">What's the special nickname I always call you?</p>
+                
+                <form id="answer-form" class="answer-form">
+                    <div class="form-group">
+                        <input 
+                            type="text" 
+                            id="answer-input" 
+                            class="form-control answer-input" 
+                            placeholder="Type your answer here..."
+                            required
+                        >
+                    </div>
+                    <button type="submit" class="btn btn--primary birthday-btn">
+                        Submit Answer 💕
+                    </button>
+                </form>
+                
+                <div id="error-message" class="error-message hidden">
+                    <p>Hmm, that's not quite right. Think about what I always call you! 💕</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Screen -->
+    <div id="video-screen" class="screen">
+        <div class="container">
+            <div class="video-content">
+                <h2 class="video-title">Here's a special message I recorded just for you ❤️</h2>
+                
+                <div class="video-container">
+                    <video 
+                        id="birthday-video" 
+                        class="birthday-video"
+                        src="videos/Anju-Birthday-video.mp4"
+                        controls
+                        preload="metadata"
+                        poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='450' fill='%23FFB6C1'%3E%3Crect width='100%25' height='100%25'/%3E%3Ctext x='50%25' y='50%25' font-size='48' text-anchor='middle' dy='0.3em'%3E🎥💕%3C/text%3E%3C/svg%3E"
+                    >
+                        <p>Your browser doesn't support HTML5 video. Please use a modern browser to view this special message.</p>
+                    </video>
+                </div>
+                
+                <div class="final-message">
+                    <p>Happy Birthday! I hope this made your day as special as you make mine every day. Love you! 🎂✨</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading overlay -->
+    <div id="loading-overlay" class="loading-overlay hidden">
+        <div class="loading-content">
+            <div class="birthday-spinner">🎁</div>
+            <p>Preparing your surprise...</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
